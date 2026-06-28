@@ -1,0 +1,22 @@
+# Thrive & Transcend
+
+AI Operating Layer, Custom Web Portals, and Back-Office Automation systems built for credentialed financial professionals and small businesses.
+
+## Primary Contact Details
+- **Email:** hello@thriveandtranscend.com
+- **Phone:** 972 362 5005
+- **Service Area:** Dallas-Fort Worth Metroplex, Texas & Nationwide
+
+## Core Positioning & Offerings
+Financial professionals build their businesses on trust and word-of-mouth. But when a referral is introduced, they check your website before calling. If they find an outdated or slow site, they silently walk away. We provide "Referral Insurance" — an elite website and automated operational layer that matches your professional expertise.
+
+- **Tier 1: Elite Website Foundation** (Starts at $2,000, up to 10 pages). Rebuilds your online sitemap brand with world-class typography, mobile speed, and structured metadata.
+- **Tier 2: The Automated Practice** (Starts at $3,000). Tier 1 + integrated client CRM database, automated booking calendars, missed-call text-back, and a Conversational AI receptionist widget.
+- **Tier 3: AI-Managed Presence via Hermes Agent** (Starts at $5,000). Tier 2 + a dedicated AI assistant on cloud compute to manage sitemap page updates, bios, and blog articles via Slack or text.
+- **Tier 4: Custom AI Operations** (Starts at $1,500 / workflow). Custom automated checklists, invoice sorting pipelines, and tax season onboarding checklists.
+
+## Sitemap Directory
+- **Home:** [index.html](index.html) - Referral leak calculation, core positioning, client grids.
+- **About:** [about.html](about.html) - Philosophy, beliefs, spectrum of users, and mission doors.
+- **Services:** [services.html](services.html) - Website makeovers, Hermes Agent setups, and workflow automations.
+- **Process:** [our-process.html](our-process.html) - Our 5-step roadmap: Diagnose, Map, Build, Activate, and Improve.

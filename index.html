@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thrive & Transcend | Elite AI Systems for Financial Practices</title>
+<meta name="description" content="Thrive & Transcend builds next-generation AI employees and elite digital portals for accounting and tax practices nationwide. Managed entirely by chat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #030306;
+    --bg-surface: rgba(10, 10, 15, 0.7);
+    --border-color: rgba(212, 175, 55, 0.12); /* Warm Gold */
+    --border-glow: rgba(212, 175, 55, 0.35);
+    
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    
+    /* Luxury Dark Palette */
+    --accent-gold: #D4AF37; /* Warm Gold */
+    --accent-bronze: #BE8A3A; /* Brushed Bronze */
+    --accent-champagne: rgba(212, 175, 55, 0.05);
+    --accent-indigo: #4F46E5;
+    
+    --font-serif: "Fraunces", Georgia, serif;
+    --font-sans: "Outfit", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    
+    --maxw: 1200px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+  }
+
+  body {
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+    position: relative;
+  }
+
+  /* Ambient Glow Spheres */
+  .ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -2;
+    pointer-events: none;
+    filter: blur(130px);
+    opacity: 0.35;
+  }
+
+  .glow-top {
+    top: -200px;
+    left: 20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  }
+
+  .glow-mid {
+    top: 1200px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(190, 138, 58, 0.08) 0%, transparent 70%);
+  }
+
+  .glow-bottom {
+    bottom: 300px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.06) 0%, transparent 70%);
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1, h2, h3, .serif {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--accent-gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: 99px;
+  }
+
+  /* Buttons styling */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 36px;
+    border-radius: 999px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-bronze) 100%);
+    color: #030306;
+    font-weight: 700;
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.25);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  .btn-primary:hover::before {
+    transform: translateX(100%);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.45);
+  }
+
+  .btn-ghost {
+    border-color: var(--border-color);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-primary);
+    backdrop-filter: blur(8px);
+  }
+
+  .btn-ghost:hover {
+    background: rgba(212, 175, 55, 0.05);
+    border-color: var(--accent-gold);
+    transform: translateY(-1px);
+  }
+
+  /* Header Navigation */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(3, 3, 6, 0.85);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .brand {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    color: var(--text-primary);
+  }
+
+  .brand span {
+    color: var(--accent-gold);
+    font-style: italic;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 34px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .nav-links a:hover {
+    color: var(--accent-gold);
+  }
+
+  .nav-cta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  @media (max-width: 880px) {
+    .nav-links { display: none; }
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 120px 0 100px;
+    position: relative;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 4.8vw, 68px);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--text-primary);
+  }
+
+  #rotating-niche {
+    transition: opacity 0.4s ease;
+    opacity: 1;
+    display: inline-block;
+    color: var(--accent-gold);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    margin-top: 24px;
+    font-size: clamp(17.5px, 1.3vw, 19.5px);
+    color: var(--text-secondary);
+    max-width: 48ch;
+  }
+
+  .hero-actions {
+    margin-top: 38px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Luxury Hero Frame for generated dark artwork */
+  .hero-image-frame {
+    position: relative;
+    border-radius: 24px;
+    padding: 16px;
+    background: rgba(10,10,15,0.7);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-image-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    filter: brightness(0.95);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .hero-image-frame:hover img {
+    transform: scale(1.02);
+  }
+
+  .hero-image-frame::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 80px;
+    height: 80px;
+    background-image: radial-gradient(var(--accent-gold) 1.5px, transparent 1.5px);
+    background-size: 8px 8px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  /* Section Divider Ribbon */
+  .niche-ribbon {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(10, 10, 15, 0.4);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 26px 0;
+  }
+
+  .niche-track {
+    display: inline-flex;
+    align-items: center;
+    animation: ribbonScroll 45s linear infinite;
+  }
+
+  .niche-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-serif);
+    font-size: clamp(18px, 1.8vw, 24px);
+    color: var(--text-secondary);
+    margin: 0 32px;
+  }
+
+  .niche-item b {
+    color: var(--text-primary);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .niche-item svg {
+    color: var(--accent-gold);
+    width: 22px;
+    height: 22px;
+    opacity: 0.8;
+  }
+
+  @keyframes ribbonScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Referral Leak Calculator Section */
+  .calculator-section {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(5,5,8,0.4);
+  }
+
+  .calculator-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    padding: 44px;
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.8),
+      inset 0 1px 0 rgba(255,255,255,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .calculator-card::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  }
+
+  .calc-header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .calc-header h3 {
+    font-size: 26px;
+    font-weight: 350;
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+  }
+
+  .calc-header p {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+
+  .calc-slider-group {
+    margin-bottom: 28px;
+  }
+
+  .calc-slider-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  .calc-slider-label span:last-child {
+    color: var(--accent-gold);
+    font-weight: 700;
+  }
+
+  /* Elegant range sliders */
+  .calc-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 8px;
+  }
+
+  .calc-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    border: 3px solid #030306;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .calc-range::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  /* Gauge styling */
+  .gauge-box {
+    position: relative;
+    width: 220px;
+    height: 120px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gauge-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gauge-readout {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .gauge-amount {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+
+  .gauge-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  /* Section Scaffolding */
+  section {
+    padding: 100px 0;
+  }
+
+  .sec-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+  }
+
+  .sec-header h2 {
+    font-size: clamp(32px, 4vw, 54px);
+    font-weight: 300;
+    margin-top: 12px;
+    color: var(--text-primary);
+  }
+
+  .sec-header h2 span {
+    color: var(--accent-gold);
+    font-style: italic;
+  }
+
+  .sec-header p {
+    font-size: clamp(17.5px, 1.3vw, 19.5px);
+    color: var(--text-secondary);
+    margin-top: 18px;
+    line-height: 1.5;
+  }
+
+  /* Bento Grid / Card Layouts with Mouse-Tracking Reflection Effect */
+  .grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 880px) {
+    .grid-3col {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .premium-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+  }
+
+  /* Mouse reflection spot overlay */
+  .premium-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(212, 175, 55, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .premium-card:hover::after {
+    opacity: 1;
+  }
+
+  .premium-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .card-indicator {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--accent-gold);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .premium-card h3 {
+    font-size: 24px;
+    font-weight: 350;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+
+  .premium-card p {
+    font-size: 15.5px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+
+  .leak-visual {
+    margin-top: auto;
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  .bounce-circle {
+    position: relative;
+    width: 88px;
+    height: 88px;
+  }
+
+  .bounce-circle svg {
+    transform: rotate(-90deg);
+  }
+
+  .bounce-val {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .hour-box {
+    aspect-ratio: 1;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .hour-box.filled {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+
+  .delay-graph {
+    width: 100%;
+  }
+
+  .delay-bar-container {
+    margin-bottom: 12px;
+  }
+
+  .delay-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+
+  .delay-bar-bg {
+    height: 8px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .delay-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  .delay-bar-fill.win {
+    width: 10%;
+    background: var(--accent-gold);
+    box-shadow: 0 0 8px var(--accent-gold);
+  }
+
+  .delay-bar-fill.lose {
+    width: 90%;
+    background: #EF4444;
+  }
+
+  /* Solutions Icons */
+  .build-icon-box {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    margin-bottom: 24px;
+  }
+
+  .build-icon-box svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Who We Serve Section (5 Columns) */
+  .grid-serve {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-serve {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 760px) {
+    .grid-serve {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .serve-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.2s ease;
+  }
+
+  .serve-card:hover {
+    background: rgba(212, 175, 55, 0.03);
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .serve-icon {
+    color: var(--accent-gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .serve-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .serve-card h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .serve-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* Offer Tiers */
+  .ladder-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ladder-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 34px;
+    display: grid;
+    grid-template-columns: 80px 1.5fr 1fr 140px;
+    gap: 32px;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Mouse reflection spot overlay */
+  .ladder-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(212, 175, 55, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .ladder-card:hover::after {
+    opacity: 1;
+  }
+
+  .ladder-card:hover {
+    transform: translateX(8px);
+    border-color: var(--accent-gold);
+    background: rgba(15, 15, 22, 0.9);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .ladder-num {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    color: var(--accent-gold);
+    font-weight: 300;
+  }
+
+  .ladder-main h3 {
+    font-size: 24px;
+    font-weight: 350;
+    color: var(--text-primary);
+  }
+
+  .ladder-main p {
+    font-size: 15.5px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .ladder-features {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    position: relative;
+    z-index: 3;
+  }
+
+  .ladder-features div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ladder-features svg {
+    color: var(--accent-gold);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .ladder-action {
+    text-align: right;
+    position: relative;
+    z-index: 3;
+  }
+
+  .ladder-price {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  .ladder-price span {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    margin-top: 2px;
+  }
+
+  @media (max-width: 960px) {
+    .ladder-card {
+      grid-template-columns: 60px 1.2fr 1fr;
+      gap: 20px;
+    }
+    .ladder-action {
+      grid-column: 2 / -1;
+      text-align: left;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ladder-price {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .ladder-card {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .ladder-num {
+      font-size: 36px;
+    }
+    .ladder-action {
+      grid-column: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+
+  /* Zero Dependency Section */
+  .dark-section {
+    background: #020204;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dark-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .dark-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  /* Feature Cards */
+  .hermes-feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: rgba(255,255,255,0.01);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 16px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hermes-feature-card:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateX(4px);
+  }
+
+  .hermes-feature-icon {
+    color: var(--accent-gold);
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hermes-feature-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hermes-feature-text h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .hermes-feature-text p {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* Chat Panel Styled as Stationery Card */
+  .chat-panel {
+    background: rgba(10,10,15,0.85);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    font-family: var(--font-sans);
+    backdrop-filter: blur(10px);
+  }
+
+  .chat-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+  }
+
+  .chat-agent-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .agent-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent-gold);
+    box-shadow: 0 0 8px var(--accent-gold);
+  }
+
+  .chat-agent-info span {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+  }
+
+  .chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 240px;
+  }
+
+  .chat-bubble {
+    padding: 14px 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 85%;
+  }
+
+  .chat-bubble.user {
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid var(--border-color);
+    color: #FFFFFF;
+    align-self: flex-end;
+    border-radius: 18px 18px 4px 18px;
+  }
+
+  .chat-bubble.assistant {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-primary);
+    align-self: flex-start;
+    border-radius: 18px 18px 18px 4px;
+  }
+
+  .chat-bubble.assistant span.highlight {
+    color: var(--accent-gold);
+    font-weight: 600;
+  }
+
+  .chat-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* Onboarding Roadmap timeline */
+  .grid-roadmap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    position: relative;
+  }
+
+  @media (max-width: 900px) {
+    .grid-roadmap {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .grid-roadmap::before {
+      display: none;
+    }
+  }
+
+  .grid-roadmap::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-gold) 0%, var(--border-color) 100%);
+    z-index: 0;
+  }
+
+  .roadmap-step {
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #030306;
+    border: 1.5px solid var(--accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.15);
+  }
+
+  .roadmap-step h4 {
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .roadmap-step p {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* Technical Specs Grid */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 880px) {
+    .tech-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tech-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .tech-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 26px;
+    transition: all 0.2s ease;
+  }
+
+  .tech-card:hover {
+    background: rgba(212, 175, 55, 0.03);
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .tech-card svg {
+    color: var(--accent-gold);
+    width: 28px;
+    height: 28px;
+    margin-bottom: 20px;
+  }
+
+  .tech-card h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .tech-card p {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* Pull Quote */
+  .quote-section {
+    background: rgba(10, 10, 15, 0.4);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+  }
+
+  .quote-section blockquote {
+    font-family: var(--font-serif);
+    font-size: clamp(24px, 3vw, 42px);
+    max-width: 24ch;
+    margin: 0 auto;
+    line-height: 1.15;
+    color: var(--text-primary);
+  }
+
+  .quote-section blockquote em {
+    color: var(--accent-gold);
+    font-style: italic;
+  }
+
+  .quote-section .attribution {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    margin-top: 24px;
+  }
+
+  /* Capture form */
+  .audit-section {
+    background: rgba(10,10,15,0.4);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    position: relative;
+  }
+
+  .audit-section-container {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .audit-section h2 {
+    font-size: clamp(32px, 3.8vw, 50px);
+    font-weight: 300;
+    color: var(--text-primary);
+  }
+
+  .audit-section p {
+    font-size: 16.5px;
+    color: var(--text-secondary);
+    margin: 18px 0 38px;
+  }
+
+  .audit-form-container {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    text-align: left;
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+  }
+
+  .form-row label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  .form-input {
+    width: 100%;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus {
+    border-color: var(--accent-gold);
+  }
+
+  .form-select {
+    width: 100%;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .form-select:focus {
+    border-color: var(--accent-gold);
+  }
+
+  .form-submit-btn {
+    width: 100%;
+    border-radius: 999px;
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  /* SEO Footer */
+  footer {
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
+    padding: 80px 0 40px;
+    color: var(--text-secondary);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr 0.75fr;
+    gap: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-col p {
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .footer-col ul li a {
+    color: var(--text-secondary);
+  }
+
+  .footer-col ul li a:hover {
+    color: var(--accent-gold);
+  }
+
+  .footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    font-size: 14.5px;
+  }
+
+  .footer-contact-item svg {
+    color: var(--accent-gold);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .footer-contact-link {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .footer-contact-link:hover {
+    color: var(--accent-gold);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-bottom span a {
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .footer-bottom span a:hover {
+    color: var(--text-secondary);
+    border-bottom-color: var(--text-secondary);
+  }
+
+  /* Scroll Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in {
+      opacity: 1;
+      transform: none;
+    }
+    .niche-track {
+      animation: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Constellation particle background layer -->
+<canvas id="starfield-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -2;"></canvas>
+
+<div class="ambient-glow glow-top"></div>
+<div class="ambient-glow glow-mid"></div>
+<div class="ambient-glow glow-bottom"></div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <div class="brand">Thrive <span>&amp;</span> Transcend</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://cal.com/thrivetranscend">Book Consult</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-tagline">
+        <span class="eyebrow">For Accounting, Tax and Financial Practices</span>
+      </div>
+      <h1 style="margin-top: 24px;">Your Trusted <span id="rotating-niche">Accounting Practice</span> AI Growth Partner</h1>
+      <p class="hero-sub">We build elite digital portals that convert your hard-earned referrals, and deploy AI employees to run your back-office — so your practice runs lighter.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://cal.com/thrivetranscend">Book Consult</a>
+      </div>
+    </div>
+
+    <!-- Luxury Bespoke Stock Graphic (Generated visual asset) -->
+    <div class="hero-image-frame fade-in">
+      <img src="luxury_dark_sculpture.png" alt="Luxurious abstract dark crystal sculpture, warm gold glowing light refraction, dark obsidian black background" width="600" height="600">
+    </div>
+  </div>
+</section>
+
+<!-- NICHE RIBBON -->
+<div class="niche-ribbon">
+  <div class="niche-track">
+    <!-- Set 1 -->
+    <div class="niche-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+      CPAs &amp; <b>Accounting Practices</b>
+    </div>
+    <div class="niche-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Wealth Managers &amp; <b>RIAs</b>
+    </div>
+    <div class="niche-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      Enrolled Agents &amp; <b>Tax Pros</b>
+    </div>
+    <div class="niche-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Mortgage <b>Brokers</b>
+    </div>
+    <div class="niche-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      Financial <b>Planners</b>
+    </div>
+    <!-- Set 2 (Duplicate for loop) -->
+    <div class="niche-item" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+      CPAs &amp; <b>Accounting Practices</b>
+    </div>
+    <div class="niche-item" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Wealth Managers &amp; <b>RIAs</b>
+    </div>
+    <div class="niche-item" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      Enrolled Agents &amp; <b>Tax Pros</b>
+    </div>
+    <div class="niche-item" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Mortgage <b>Brokers</b>
+    </div>
+    <div class="niche-item" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      Financial <b>Planners</b>
+    </div>
+  </div>
+</div>
+
+<!-- LEAK CALCULATOR (DEDICATED SECTION 01) -->
+<section class="calculator-section" id="problem">
+  <div class="wrap">
+    <div class="sec-header" style="text-align: center; margin: 0 auto 60px;">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>01 — The Leak</div>
+      <h2>Referred clients check your website first. <span>An outdated portal leaks value.</span></h2>
+      <p style="margin-left: auto; margin-right: auto;">Estimate the annual revenue cost of a standard 40% bounce rate on low-credibility sites using our interactive leak analyzer.</p>
+    </div>
+
+    <!-- Referral Leak Calculator Widget -->
+    <div class="calculator-card fade-in">
+      <div class="calc-header">
+        <h3>Referral Revenue Leakage Model</h3>
+        <p>Adjust the sliders to calibrate calculations against your firm's current client value metrics.</p>
+      </div>
+      
+      <div class="calc-slider-group">
+        <div class="calc-slider-label">
+          <span>Average Client Value / Yr</span>
+          <span id="label-value">$5,000</span>
+        </div>
+        <input type="range" class="calc-range" id="input-value" min="1000" max="20000" step="500" value="5000">
+      </div>
+
+      <div class="calc-slider-group">
+        <div class="calc-slider-label">
+          <span>Annual Referrals Received</span>
+          <span id="label-referrals">20</span>
+        </div>
+        <input type="range" class="calc-range" id="input-referrals" min="5" max="100" step="5" value="20">
+      </div>
+
+      <div class="gauge-box">
+        <svg class="gauge-svg" viewBox="0 0 200 100">
+          <defs>
+            <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#BE8A3A" />
+              <stop offset="100%" stop-color="#D4AF37" />
+            </linearGradient>
+          </defs>
+          <!-- Outer track arc -->
+          <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="rgba(212, 175, 55, 0.05)" stroke-width="6" stroke-linecap="round" />
+          <!-- Filled path -->
+          <path id="gauge-fill" d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="url(#gaugeGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="150" />
+          <!-- Needle -->
+          <line id="gauge-needle" x1="100" y1="90" x2="100" y2="24" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" style="transform-origin: 100px 90px; transform: rotate(-36deg); transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" />
+          <circle cx="100" cy="90" r="5" fill="#030306" stroke="#D4AF37" stroke-width="2" />
+        </svg>
+        <div class="gauge-readout">
+          <div class="gauge-amount" id="leak-amount">$40,000</div>
+          <div class="gauge-label">Lost Revenue / Yr</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STATS / DETAIL CARDS -->
+<section style="background: rgba(10, 10, 15, 0.4); border-bottom: 1px solid var(--border-color);">
+  <div class="wrap">
+    <div class="grid-3col">
+      <!-- Card 1: Referral Bounce -->
+      <div class="premium-card reflection-card fade-in">
+        <div class="card-indicator">01 / BRAND IMPACT</div>
+        <h3>The Referral Bounce</h3>
+        <p>Over 40% of referred clients decide not to contact a financial professional after viewing a low-credibility or outdated website.</p>
+        <div class="leak-visual">
+          <div class="bounce-circle">
+            <svg width="88" height="88" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="40" stroke="rgba(212, 175, 55, 0.08)" stroke-width="6" fill="none" />
+              <circle cx="50" cy="50" r="40" stroke="var(--accent-gold)" stroke-width="6" fill="none" stroke-dasharray="251" stroke-dashoffset="150" />
+            </svg>
+            <div class="bounce-val">40%+</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Administrative Drain -->
+      <div class="premium-card reflection-card fade-in" style="transition-delay: 0.15s;">
+        <div class="card-indicator">02 / OPERATIONAL DRAIN</div>
+        <h3>Administrative Hours</h3>
+        <p>Firms lose an average of 15 hours a week per partner managing appointments, chasing signatures, and executing basic onboarding paperwork manually.</p>
+        <div class="leak-visual">
+          <div class="hours-grid">
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box filled"></div>
+            <div class="hour-box"></div>
+            <div class="hour-box"></div>
+            <div class="hour-box"></div>
+            <div class="hour-box"></div>
+            <div class="hour-box"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Response Delay -->
+      <div class="premium-card reflection-card fade-in" style="transition-delay: 0.3s;">
+        <div class="card-indicator">03 / CONVERSION LAG</div>
+        <h3>The Response Gap</h3>
+        <p>Referred prospects expect fast replies. Waiting hours or days to confirm a consultation causes interest to cool and lets competitors step in.</p>
+        <div class="leak-visual">
+          <div class="delay-graph">
+            <div class="delay-bar-container">
+              <div class="delay-bar-label"><span>AI Receptionist</span><span>5 Mins</span></div>
+              <div class="delay-bar-bg"><div class="delay-bar-fill win"></div></div>
+            </div>
+            <div class="delay-bar-container">
+              <div class="delay-bar-label"><span>Typical Firm</span><span>47 Hours</span></div>
+              <div class="delay-bar-bg"><div class="delay-bar-fill lose"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section id="build" style="border-bottom: 1px solid var(--border-color);">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>02 — Solutions</div>
+      <h2>What we build. <span>Integrated systems for trust and operations.</span></h2>
+      <p>We replace disjointed legacy tools with an elite visual presence and a structured automation layer.</p>
+    </div>
+
+    <div class="grid-3col">
+      <!-- Websites -->
+      <div class="premium-card reflection-card fade-in">
+        <div class="build-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Elite Websites</h3>
+        <p>Custom digital portals engineered for speed, mobile polish, accessibility, and professional credibility. Specifically designed to make referrals choose you.</p>
+      </div>
+
+      <!-- AI Employees -->
+      <div class="premium-card reflection-card fade-in" style="transition-delay: 0.15s;">
+        <div class="build-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>AI Employees &amp; Schedulers</h3>
+        <p>Autonomous receptionists, missed-call text-back triggers, and chat widgets that qualify prospects in under 5 minutes.</p>
+      </div>
+
+      <!-- CRM & Automations -->
+      <div class="premium-card reflection-card fade-in" style="transition-delay: 0.3s;">
+        <div class="build-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>CRM &amp; Automations</h3>
+        <p>Unified database layers and client portal integrations that tie your lead intake, calendar scheduling, and follow-up sequences together without manual drag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE THRIVE MODEL -->
+<section id="model" style="background: rgba(10, 10, 15, 0.4); border-bottom: 1px solid var(--border-color);">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>03 — Methodology</div>
+      <h2>The Thrive Model. <span>Moving beyond static websites.</span></h2>
+      <p>An elite online presence is not just a digital brochure. It is a living system that supports your reputation and runs your admin.</p>
+    </div>
+
+    <div class="grid-3col">
+      <!-- Presence -->
+      <div class="premium-card reflection-card fade-in">
+        <div class="card-indicator">STAGE 01 / BRANDING</div>
+        <h3>Presence</h3>
+        <p>Establishing an outstanding first impression. Rebuilding layouts, typography, and outcome-led copy to match the level of your practice's actual expertise.</p>
+      </div>
+
+      <!-- Intelligence -->
+      <div class="premium-card reflection-card fade-in" style="transition-delay: 0.15s;">
+        <div class="card-indicator">STAGE 02 / RELEVANCE</div>
+        <h3>Intelligence</h3>
+        <p>Configuring search engines and conversational AI bots (Perplexity, ChatGPT) to read, index, cite, and recommend your practice for local search queries.</p>
+      </div>
+
+      <!-- Operations -->
+      <div class="premium-card reflection-card fade-in" style="transition-delay: 0.3s;">
+        <div class="card-indicator">STAGE 03 / AUTOMATION</div>
+        <h3>Operations</h3>
+        <p>Enabling chat-managed website updates, automated booking paths, missed-call text-back, and custom workflows to take admin tasks off your plate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="serve" style="border-bottom: 1px solid var(--border-color);">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>04 — Niches</div>
+      <h2>Who we serve. <span>Built for the demands of your practice.</span></h2>
+      <p>We tailor our digital presence and AI workflows to fit the specific compliance, security, and operation goals of credentialed practices.</p>
+    </div>
+
+    <div class="grid-serve">
+      <!-- CPAs -->
+      <div class="serve-card fade-in">
+        <div class="serve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+        </div>
+        <h4>CPAs &amp; Accounting</h4>
+        <p>Secure client portals, custom intake forms, and automated document collection to ease tax-season crunches.</p>
+      </div>
+
+      <!-- Wealth Managers -->
+      <div class="serve-card fade-in" style="transition-delay: 0.08s;">
+        <div class="serve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4>Wealth Managers</h4>
+        <p>Premium credibility layout to secure high-value client referrals and automated follow-ups.</p>
+      </div>
+
+      <!-- Tax Pros -->
+      <div class="serve-card fade-in" style="transition-delay: 0.16s;">
+        <div class="serve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>Tax Practices</h4>
+        <p>Qualified scheduling systems, missed-call responders, and document-request checklists.</p>
+      </div>
+
+      <!-- Mortgage Brokers -->
+      <div class="serve-card fade-in" style="transition-delay: 0.24s;">
+        <div class="serve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h4>Mortgage Brokers</h4>
+        <p>Lead qualify routing from webchat to text message and instant appointment calendars.</p>
+      </div>
+
+      <!-- Financial Planners -->
+      <div class="serve-card fade-in" style="transition-delay: 0.32s;">
+        <div class="serve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h4>Financial Planners</h4>
+        <p>Elite digital branding that matches your expertise, with automated booking triggers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE OFFER LADDER -->
+<section id="ladder" style="background: rgba(10, 10, 15, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>05 — Offerings</div>
+      <h2>Our service levels. <span>No more technical than you want to be.</span></h2>
+      <p>Start with a high-impact website foundation that protects your referrals, then layer in operational automation as your practice grows.</p>
+    </div>
+
+    <div class="ladder-container">
+      <!-- Rung 1 -->
+      <div class="ladder-card fade-in">
+        <div class="ladder-num">01</div>
+        <div class="ladder-main">
+          <h3>Elite Website Foundation</h3>
+          <p>Rebuild your online brand with world-class typography, mobile speed, and structured metadata. Replaces outdated sites to secure your referrals. Includes **up to 10 pages**.</p>
+        </div>
+        <div class="ladder-features">
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Up to 10 custom pages</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Lighthouse 95+ speed</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Structured Schema data</div>
+        </div>
+        <div class="ladder-action">
+          <div class="ladder-price">Starts at<span>$2,000</span></div>
+          <a class="btn btn-ghost" href="https://cal.com/thrivetranscend" style="padding: 10px 20px; font-size: 13px;">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Rung 2 -->
+      <div class="ladder-card fade-in" style="transition-delay: 0.1s;">
+        <div class="ladder-num">02</div>
+        <div class="ladder-main">
+          <h3>The Automated Practice</h3>
+          <p>Tier 1 plus active lead capture tools: an integrated client database, automated booking calendars, missed-call text-back, and a Conversational AI receptionist widget.</p>
+        </div>
+        <div class="ladder-features">
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Integrated client CRM</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Conversational AI Webchat</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Missed-Call Text-Back</div>
+        </div>
+        <div class="ladder-action">
+          <div class="ladder-price">Starts at<span>$3,000</span></div>
+          <a class="btn btn-primary" href="https://cal.com/thrivetranscend" style="padding: 10px 20px; font-size: 13px;">Popular Option</a>
+        </div>
+      </div>
+
+      <!-- Rung 3 -->
+      <div class="ladder-card fade-in" style="transition-delay: 0.2s;">
+        <div class="ladder-num">03</div>
+        <div class="ladder-main">
+          <h3>AI-Managed Presence</h3>
+          <p>Tier 2 plus a dedicated AI assistant (Hermes Agent) hosted on your own cloud computer. Update bios, publish blog content, and edit pages by sending a simple text message.</p>
+        </div>
+        <div class="ladder-features">
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Dedicated Cloud Machine</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Hermes Agent Integration</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Edit-by-text system</div>
+        </div>
+        <div class="ladder-action">
+          <div class="ladder-price">Starts at<span>$5,000</span></div>
+          <a class="btn btn-ghost" href="https://cal.com/thrivetranscend" style="padding: 10px 20px; font-size: 13px;">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Rung 4 -->
+      <div class="ladder-card fade-in" style="transition-delay: 0.3s;">
+        <div class="ladder-num">04</div>
+        <div class="ladder-main">
+          <h3>Custom AI Operations</h3>
+          <p>Custom-built operational automations running on your cloud server. Automate document sorting, tax onboarding checklists, and social publication workflows.</p>
+        </div>
+        <div class="ladder-features">
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Bespoke tax season intake</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Auto document ingestion</div>
+          <div><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Custom social publisher</div>
+        </div>
+        <div class="ladder-action">
+          <div class="ladder-price">Starts at<span>$1,500 <small>/ workflow</small></span></div>
+          <a class="btn btn-ghost" href="https://cal.com/thrivetranscend" style="padding: 10px 20px; font-size: 13px;">Inquire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZERO DEPENDENCY (DARK AGENTIC) -->
+<section class="dark-section" id="approach">
+  <div class="wrap dark-grid">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-dot"></span>06 — Zero Dependency</div>
+      <h2 style="font-size: clamp(32px, 3.8vw, 50px); margin-top: 14px; color: var(--text-primary);">Update your site <span>as easily as sending a text.</span></h2>
+      <p style="color: var(--text-secondary); margin-top: 18px; margin-bottom: 24px; font-size: 17.5px;">
+        Reclaim complete control over your digital presence. With a white-labeled AI agent hosted on your own cloud computer, making site edits is as simple as texting a colleague.
+      </p>
+      
+      <!-- Redesigned Feature Cards -->
+      <div class="hermes-feature-card">
+        <div class="hermes-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="hermes-feature-text">
+          <h4>Edit Everything</h4>
+          <p>Text in plain English to update team bios, change services, or list new events instantly.</p>
+        </div>
+      </div>
+
+      <div class="hermes-feature-card">
+        <div class="hermes-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="hermes-feature-text">
+          <h4>Blogs &amp; Streams</h4>
+          <p>Publish scheduled articles or post stream-of-consciousness writing on the fly.</p>
+        </div>
+      </div>
+
+      <div class="hermes-feature-card">
+        <div class="hermes-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="hermes-feature-text">
+          <h4>Zero Friction</h4>
+          <p>No developer retainers to pay, no coding or configuration updates, and no waiting.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Chat Mockup -->
+    <div class="chat-panel fade-in">
+      <div class="chat-title-bar">
+        <div class="chat-agent-info">
+          <div class="agent-status-dot"></div>
+          <span>Practice Assistant</span>
+        </div>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--text-muted)" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+      </div>
+
+      <div class="chat-box">
+        <div class="chat-bubble user">
+          Add my new CFP designation to my profile page and the header bio.
+          <div class="chat-meta">You · 10:42 AM</div>
+        </div>
+        <div class="chat-bubble assistant">
+          Working on it... Updating credentials on your profile and bio text.
+          <div class="chat-meta">AI Agent · 10:42 AM</div>
+        </div>
+        <div class="chat-bubble assistant" style="transition-delay: 1.5s;">
+          Done. The <span class="highlight">CFP®</span> credential is now live across your website. I also updated your site's Schema structured data so Google and AI assistants read it correctly.
+          <div class="chat-meta">AI Agent · 10:43 AM · <span style="color:var(--accent-gold)">Live ✓</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP TO IMPACT -->
+<section id="roadmap" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>07 — Onboarding</div>
+      <h2>Roadmap to Impact. <span>From outdated to automated.</span></h2>
+      <p>Our structured onboarding roadmap designed to build credibility and launch automated workflows without disrupting your daily operations.</p>
+    </div>
+
+    <div class="grid-roadmap">
+      <!-- Step 1 -->
+      <div class="roadmap-step fade-in">
+        <div class="step-num">01</div>
+        <h4>Diagnose</h4>
+        <p>We analyze credibility gaps, mobile responsiveness bottlenecks, and speed friction points using our conversion audit.</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="roadmap-step fade-in" style="transition-delay: 0.08s;">
+        <div class="step-num">02</div>
+        <h4>Map</h4>
+        <p>We map your sitemap structure, design your CRM database pipelines, and program the prompts for your AI receptionist.</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="roadmap-step fade-in" style="transition-delay: 0.16s;">
+        <div class="step-num">03</div>
+        <h4>Build</h4>
+        <p>We construct your responsive site, set up the database integration, and launch the conversational scheduling tools.</p>
+      </div>
+      <!-- Step 4 -->
+      <div class="roadmap-step fade-in" style="transition-delay: 0.24s;">
+        <div class="step-num">04</div>
+        <h4>Activate</h4>
+        <p>We connect booking paths, set missed-call text-back rules, and connect client portal hubs.</p>
+      </div>
+      <!-- Step 5 -->
+      <div class="roadmap-step fade-in" style="transition-delay: 0.32s;">
+        <div class="step-num">05</div>
+        <h4>Improve</h4>
+        <p>We connect the Hermes Cloud Agent so you can manage page edits, publish articles, and schedule blogs via text.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL ENGINE -->
+<section id="engine" style="background: rgba(10, 10, 15, 0.4);">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>08 — Under The Hood</div>
+      <h2>The technical standards <span>built into every site.</span></h2>
+      <p>We build our designs on modern digital architectures to ensure they exceed every technical speed, structural, and discovery standard.</p>
+    </div>
+
+    <div class="tech-grid">
+      <!-- F1 Speed -->
+      <div class="tech-card fade-in">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <h4>95+ Speed Scores</h4>
+        <p>We optimize assets, compress images, and write clean code to secure Lighthouse performance passes.</p>
+      </div>
+
+      <!-- SEO/AEO -->
+      <div class="tech-card fade-in" style="transition-delay: 0.1s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4>AI Engine Schema</h4>
+        <p>Custom microdata tells search crawlers and AI bots exactly what services you offer and who you serve.</p>
+      </div>
+
+      <!-- llms.txt -->
+      <div class="tech-card fade-in" style="transition-delay: 0.2s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <h4>Citable Content</h4>
+        <p>An integrated `llms.txt` file lets conversational interfaces read and extract details about your firm easily.</p>
+      </div>
+
+      <!-- Owner -->
+      <div class="tech-card fade-in" style="transition-delay: 0.3s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="2" y1="12" x2="4" y2="12"/></svg>
+        <h4>Full Ownership</h4>
+        <p>No vendor lock-in. Your files, database records, and CRM integrations remain 100% yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="quote-section">
+  <div class="wrap">
+    <blockquote class="fade-in">
+      “Technology should protect relationships, not get in the way. Reclaim your administrative hours so you can focus on <em>advising your clients.</em>”
+    </blockquote>
+    <div class="attribution fade-in">— Thrive &amp; Transcend Philosophy</div>
+  </div>
+</section>
+
+<!-- AUDIT CAPTURE FORM -->
+<section class="audit-section" id="audit">
+  <div class="wrap audit-section-container">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>Referral Insurance</div>
+    <h2 style="margin-top: 14px;">Book a Consultation</h2>
+    <p>Select your practice type, enter your website and email, and schedule a call to see how we can secure your referrals and streamline your back-office.</p>
+    
+    <div class="audit-form-container fade-in">
+      <form onsubmit="event.preventDefault(); alert('In a live setup, this form maps directly to your CRM database pipeline to trigger the automated calendar booking workflow.');">
+        <div class="form-row">
+          <label for="practice-url">Your Website URL</label>
+          <input type="text" class="form-input" id="practice-url" placeholder="yourpractice.com" required>
+        </div>
+        
+        <div class="form-row">
+          <label for="practice-niche">Niche Industry</label>
+          <select class="form-select" id="practice-niche" required>
+            <option value="">Select your practice...</option>
+            <option value="cpa">Accounting Practice / CPA</option>
+            <option value="wealth">Wealth Management / RIA</option>
+            <option value="tax">Tax Preparation Professional</option>
+            <option value="mortgage">Mortgage Brokerage</option>
+            <option value="financial-plan">Financial Planning Firm</option>
+            <option value="other">Other Practice</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="practice-email">Business Email</label>
+          <input type="email" class="form-input" id="practice-email" placeholder="you@yourpractice.com" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary form-submit-btn">Schedule Strategy Call →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SEO / AEO / GEO OPTIMIZED FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <!-- Col 1: Entity Info -->
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom: 16px;">Thrive <span>&amp;</span> Transcend</div>
+        <p style="margin-bottom: 20px;">Elite web portals and custom CRM integration systems for credentialed financial practices nationwide.</p>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a class="footer-contact-link" href="mailto:hello@thriveandtranscend.com">hello@thriveandtranscend.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a class="footer-contact-link" href="tel:9723625005">972 362 5005</a>
+        </div>
+        <div class="footer-contact-item" style="color: var(--text-muted); font-size: 13.5px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dallas-Fort Worth, TX (Serving Firms Nationwide)</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Who We Serve -->
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul>
+          <li>Accounting Practices &amp; CPAs</li>
+          <li>Wealth Managers &amp; RIAs</li>
+          <li>Tax Preparation Professionals</li>
+          <li>Mortgage Brokerages &amp; Lenders</li>
+          <li>Financial Planners</li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Solutions -->
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li>Elite Credibility Websites</li>
+          <li>Conversational AI Schedulers</li>
+          <li>Unified CRM Databases</li>
+          <li>Chat-Managed Operations</li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Quick Links -->
+      <div class="footer-col">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="#problem">Why it matters</a></li>
+          <li><a href="#build">What we build</a></li>
+          <li><a href="#ladder">Service levels</a></li>
+          <li><a href="#approach">Hermes Agent</a></li>
+          <li><a href="#roadmap">Onboarding</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© 2026 Thrive &amp; Transcend. All rights reserved.</span>
+      <span>Elite digital systems for credentialed practices. <a href="/llms.txt" target="_blank">llms.txt Directory</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Dynamic Niche Title Typewriter/Fade Rotation
+  const rotatingNiche = document.getElementById('rotating-niche');
+  const niches = [
+    "Accounting Practice",
+    "Tax Practice",
+    "Wealth Management",
+    "Financial Planning",
+    "Mortgage Brokerage"
+  ];
+  let currentNicheIndex = 0;
+
+  setInterval(() => {
+    rotatingNiche.style.opacity = 0;
+    setTimeout(() => {
+      currentNicheIndex = (currentNicheIndex + 1) % niches.length;
+      rotatingNiche.textContent = niches[currentNicheIndex];
+      rotatingNiche.style.opacity = 1;
+    }, 400);
+  }, 3000);
+
+  // Referral Leak Calculator JavaScript Logic
+  const inputValue = document.getElementById('input-value');
+  const inputReferrals = document.getElementById('input-referrals');
+  
+  const labelValue = document.getElementById('label-value');
+  const labelReferrals = document.getElementById('label-referrals');
+  const leakAmount = document.getElementById('leak-amount');
+  
+  const gaugeFill = document.getElementById('gauge-fill');
+  const gaugeNeedle = document.getElementById('gauge-needle');
+
+  function formatCurrency(num) {
+    return '$' + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function updateCalculator() {
+    const value = parseInt(inputValue.value, 10);
+    const referrals = parseInt(inputReferrals.value, 10);
+    
+    labelValue.textContent = formatCurrency(value);
+    labelReferrals.textContent = referrals;
+
+    // Calculate Leakage assuming 40% bounce rate on low-credibility sites
+    const leak = Math.round(value * referrals * 0.40);
+    leakAmount.textContent = formatCurrency(leak);
+
+    // Max leak is $400,000 for gauge scale
+    const maxLeak = 400000;
+    const percentage = Math.min(leak / maxLeak, 1);
+    
+    // SVG Path Stroke-Dashoffset updates
+    const dashoffset = 251 - (251 * percentage);
+    gaugeFill.style.strokeDashoffset = dashoffset;
+
+    // Rotate needle from -90deg to 90deg (180deg total swing)
+    const angle = -90 + (180 * percentage);
+    gaugeNeedle.style.transform = `rotate(${angle}deg)`;
+  }
+
+  inputValue.addEventListener('input', updateCalculator);
+  inputReferrals.addEventListener('input', updateCalculator);
+
+  // Initial calculation
+  updateCalculator();
+
+  // Scroll Fade-in Intersection Observer
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    scrollObserver.observe(el);
+  });
+
+  // ULTRA-HIGH-END: Mouse-Tracking Reflection Effect Script
+  document.querySelectorAll('.reflection-card, .ladder-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  // ULTRA-HIGH-END: Star-Constellation background script
+  const canvas = document.getElementById('starfield-canvas');
+  const ctx = canvas.getContext('2d');
+  
+  let stars = [];
+  const starCount = 35;
+  const connectionDistance = 110;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    // Bind canvas height to document scrollable height
+    canvas.height = Math.max(
+      document.body.scrollHeight, 
+      document.body.offsetHeight, 
+      document.documentElement.clientHeight, 
+      document.documentElement.scrollHeight, 
+      document.documentElement.offsetHeight
+    );
+  }
+
+  class Star {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.vx = (Math.random() - 0.5) * 0.15;
+      this.vy = (Math.random() - 0.5) * 0.15;
+      this.radius = Math.random() * 1.5 + 0.5;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+      if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(212, 175, 55, 0.25)';
+      ctx.fill();
+    }
+  }
+
+  function initStars() {
+    stars = [];
+    for (let i = 0; i < starCount; i++) {
+      stars.push(new Star());
+    }
+  }
+
+  function drawConnections() {
+    for (let i = 0; i < stars.length; i++) {
+      for (let j = i + 1; j < stars.length; j++) {
+        const dx = stars[i].x - stars[j].x;
+        const dy = stars[i].y - stars[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < connectionDistance) {
+          const alpha = (1 - dist / connectionDistance) * 0.08;
+          ctx.beginPath();
+          ctx.moveTo(stars[i].x, stars[i].y);
+          ctx.lineTo(stars[j].x, stars[j].y);
+          ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function animateStars() {
+    // Clear only a portion if we want fading trails, but full clear is standard
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    stars.forEach(star => {
+      star.update();
+      star.draw();
+    });
+
+    drawConnections();
+    requestAnimationFrame(animateStars);
+  }
+
+  window.addEventListener('resize', () => {
+    resizeCanvas();
+    initStars();
+  });
+
+  // Initialize
+  resizeCanvas();
+  initStars();
+  animateStars();
+</script>
+</body>
+</html>

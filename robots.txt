@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Allow AI scrapers explicitly to read sitemaps and directory nodes
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
