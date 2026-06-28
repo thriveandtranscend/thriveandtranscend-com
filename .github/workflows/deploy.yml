@@ -13,7 +13,7 @@ jobs:
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: *** secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: '53e4ac3f88cea2f8ee47ced038fa6174'
           command: pages deploy . --project-name=thriveandtranscend-com --branch=main
         env:
