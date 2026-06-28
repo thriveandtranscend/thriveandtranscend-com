@@ -1,15 +1,21 @@
 name: Deploy to Cloudflare Pages
+
 on:
   push:
     branches: [main]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy to Cloudflare Pages
+      
+      - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: *** secrets.CLOUDFLARE_API_TOKEN }}
           accountId: '53e4ac3f88cea2f8ee47ced038fa6174'
           command: pages deploy . --project-name=thriveandtranscend-com --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN=*** secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: '53e4ac3f88cea2f8ee47ced038fa6174'
